@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-image: url(./Images/love\ 3.webp);
+             height: auto;
+            width: 35%;
+            position: relative;
+            justify-content: center;
+            text-align: center;
+            margin-left: 30%;
+            margin-top: 3%;
+            padding: 4%;
+            border: 5px;
+            border-radius: 5%;
+            border-color:goldenrod;
+            border-style: solid;
+            color:crimson;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        /* .box::before{
+            background-image: url(love\ 3.webp);
+            background-repeat: no-repeat;
+            content: "";
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        } */
+        .bd{
+            background-image: url(./Images/luv\ 1.jpg);
+           
+           
+            
+           
+        }
+        .btn{
+            font-size: 1rem;
+             color: brown;
+             background-color: rgb(197, 197, 28);
+              border-style: solid;
+               border: 3px;
+               border-color:brown ;
+               border-radius: 25%;
+               padding: 3%;
+               font-weight: bold;
+               
+               
+        }
+        .btn:hover{
+            background-color: brown;
+            color: rgb(197, 197, 28) ;
+        }
+        @media (min-width: 300px){
+            .box{
+           font-size: 1rem;
+            
+            }
+         }
+         
+        @media (min-width: 768px){
+            .box{
+           font-size: 1.5rem;
+            
+            }
+         }
+         @media(min-width: 1200px){
+            .box{
+           font-size: 2rem;
+            
+            }
+         }
+         @media  (min-width: 1600px){
+            .box{
+           font-size: 2rem;
+            
+            }
+         }
+         .inpt{
+           border: 1px;
+           
+            width: 40%;
+            color: darkred;
+            border-style: solid;
+            border-radius: 20px;
+            background-color: rgb(223, 177, 184);
+            border-color: #3290b6;
+            padding: 2%;
+        }
+        .spn{
+            color: brown;
+        }
+        .p1{
+            border: 2px;
+            padding: 3%;
+            border-style: solid;
+            border-color: goldenrod;
+            border-radius: 5%;
+            background-color: rgba(218, 165, 32, 0.678);
+        }
+        .hr1{
+            
+             border-color: rgba(128, 0, 0, 0.829); 
+             margin-top: -6%;
+        }
+        input:focus {
+            outline: none;
+        }
+      
+       
+         
+        
+    </style>
+</head>
+<body class="bd">
+      <div class="box">
+         <h1 style="color:rgba(128, 0, 0, 0.829)">Love Calculater</h1>
+         <hr class="hr1">
+        Your Name <input class="inpt" type="text" ><br><br>
+        Your Partner Name<input class="inpt" type="text" ><br><br>
+        <input class="btn" type="button" onClick="lovescore()" Value="Check" />
+       <p class="p1"><span style="font-weight: bold;">Love Score:</span>
+        <span class="spn"  id="result"></span>
+    </p>
+    <p> <img src="./Images/loveicon.png"></p>
+        </div>
+    </div>
+    <script>
+        function lovescore(){
+       let love = Math.floor(Math.random() * 100) +1 ;   
+       if (love <= 50 ) {
+        document.getElementById("result").innerHTML = " Your love score is " + love + "%. Work on your Relationship";
+        }
+        else if (love > 50 && love <=80 ){
+            document.getElementById("result").innerHTML = " Your love score is " + love + "%. A Healthy Relationship";
+        }
+        else {
+            document.getElementById("result").innerHTML = " Your love score is " + love + "%. Made for each other";
+
+        }
+    }
+</script>
+</body>
+</html>
